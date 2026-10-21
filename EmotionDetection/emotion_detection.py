@@ -47,11 +47,5 @@ def emotion_detector(text_to_analyze):
         )
         return result
 
-    except (
-        requests.RequestException,
-        ValueError,
-        KeyError,
-        IndexError,
-        TypeError,
-    ):
+    except (requests.RequestException, ValueError, KeyError, IndexError, TypeError):
         return empty_result
